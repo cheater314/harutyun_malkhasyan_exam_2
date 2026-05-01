@@ -39,9 +39,52 @@ export async function findById(id) {
     return books.find(b => b.id === id) || null;
 }
 
+export async function create(data) {
+    const books = await readJSON();
 
+    const newBook = {
+        id: uuidv4(),
+        ...data
+    };
 
+    books.push(newBook);
+    await writeJSON(books);
 
+    return newBook;
+}
 
+export async function update(id, userId, data) {
+    const books = await readJSON();
 
+    const index = books.findIndex(b => b.id === id && b.userId === userId);
 
+    if (index === -1) return null;
+
+    books[index] = { ...books[index], ...data };
+
+    await writeJSON(books);
+
+    return books[index];
+}
+
+export async function deleteBook(id, userId) {
+    const books = await readJSON();
+
+    const filtered = books.filter(b => !(b.id === id && b.userId === userId));
+
+    if (filtered.length === books.length) return false;
+
+    await writeJSON(filtered);
+
+    return true;
+}
+
+export default {
+    readJSON,
+    writeJSON,
+    findAll,
+    findById,
+    create,
+    update,
+    deleteBook
+};
