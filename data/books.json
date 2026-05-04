@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "159fa129-f425-45ea-aaf1-4b461873750a",
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "year": 2001,
+    "genre": "fantasy",
+    "userId": "da4e99dc-8d49-4c5f-ac2b-81cba8ae5e2e"
+  }
+]

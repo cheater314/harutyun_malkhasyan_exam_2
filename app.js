@@ -17,6 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(router);
 
+app.use((req, res) => {
+    console.log("Route not found:", req.method, req.url);
+    res.status(404).send("Not Found");
+});
+
 app.use(errorHandler.notFound);
 app.use(errorHandler.errors);
 

@@ -5,5 +5,12 @@
     "email": "john@mail.com",
     "password": "92d31fed0919e78a2c3c7b83f12ca3e7",
     "age": 25
+  },
+  {
+    "id": "da4e99dc-8d49-4c5f-ac2b-81cba8ae5e2e",
+    "username": "mike",
+    "email": "mike@mail.com",
+    "password": "54801075c4228096978fb47e142f288c",
+    "age": 34
   }
 ]

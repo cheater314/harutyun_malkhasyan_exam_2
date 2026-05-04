@@ -1,4 +1,4 @@
-import { Router } from "express";
+import {Router} from "express";
 import validator from "../middlewares/validation.js";
 import authorization from "../middlewares/authorization.js";
 import * as schema from "../middlewares/schemas/books.schema.js";
